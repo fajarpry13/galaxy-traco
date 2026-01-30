@@ -19,7 +19,7 @@
         <a href="#" class="px-0.5 py-1.5 font-black text-white hover:border-b-2 border-red-600 pb-1">INSIGHTS</a>
         <a href="#" class="px-0.5 py-1.5 font-black text-white hover:border-b-2 border-red-600 pb-1">CONTACT</a>
         
-        <a href="{{ route('login') }}" class=" bg-red-600 text-white px-4 py-2 rounded-2xl font-black hover:bg-red-700 transition">
+        <a href="#" class=" bg-red-600 text-white px-4 py-2 rounded-2xl font-black hover:bg-red-700 transition">
             CLIENT AREA
         </a>
     </nav>
