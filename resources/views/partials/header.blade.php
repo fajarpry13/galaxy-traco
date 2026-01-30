@@ -6,7 +6,7 @@
         <img src="{{ asset('/assets/images/logo.png') }}" alt="Galaxy Traco Logo" />
         <div class="flex flex-col leading-tight">
             <span class="text-white text-xl md:text-2xl font-goth font-black tracking-tighter">GALAXY</span>
-            <span class="text-white text-xl md:text-2xl font-black tracking-tighter">TRACO</span>
+            <span class="text-white text-xl md:text-2xl font-goth font-black tracking-tighter">TRACO</span>
         </div>
     </div>
 
@@ -19,7 +19,7 @@
         <a href="#" class="px-0.5 py-1.5 font-black text-white hover:border-b-2 border-red-600 pb-1">INSIGHTS</a>
         <a href="#" class="px-0.5 py-1.5 font-black text-white hover:border-b-2 border-red-600 pb-1">CONTACT</a>
         
-        <a href="#" class=" bg-red-600 text-white px-4 py-2 rounded-2xl font-black hover:bg-red-700 transition">
+        <a href="{{ route('login') }}" class=" bg-red-600 text-white px-4 py-2 rounded-2xl font-black hover:bg-red-700 transition">
             CLIENT AREA
         </a>
     </nav>

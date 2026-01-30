@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.page')
 
 @section('title', 'Galaxy Traco - Trusted Solution to Import Goods Overseas')
 
