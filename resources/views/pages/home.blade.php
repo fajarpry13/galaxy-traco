@@ -223,7 +223,6 @@
 </section>
 
 <section class="relative py-20 bg-fixed bg-cover bg-[#006838] bg-blend-multiply bg-center" style="background-image: url('{{ asset('assets/images/bg2.png') }}')">
-    <div class="absolute inset-0 z-0"></div>
 
     <div class="relative z-10 container mx-auto px-4 text-center text-white">
         <h2 class="text-4xl md:text-5xl font-bold mb-4">Why Makes Us Different?</h2>
