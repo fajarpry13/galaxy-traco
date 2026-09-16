@@ -6,7 +6,7 @@
         playsinline
         class="z-0 absolute inset-0 w-full h-full object-cover"
       >
-        <source src="https://res.cloudinary.com/drzuvqa4y/video/upload/v1767588921/GalaxyTracoWeb_01_pdvsxy.mp4" type="video/mp4">
+        <source src="{{ asset('videos/cargo-ship.mp4') }}" type="video/mp4">
       </video>
 
     <div class="z-10 relative flex flex-col justify-center items-center px-4 h-full text-white text-center">
