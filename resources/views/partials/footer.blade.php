@@ -2,7 +2,7 @@
 
    <a href="https://wa.me/628123456789" class="fixed bottom-4 right-7 md:right-8 z-50">
     <img class="w-12 h-12 md:w-14 md:h-14 drop-shadow-xl hover:scale-110 transition-transform" 
-         src="assets/images/whatsapp.png" 
+         src="{{asset ('assets/images/whatsapp.png')}}" 
          alt="whatsapp-image">
   </a>
 
@@ -16,14 +16,14 @@
 
     <div class="mb-12">
       <p class="text-x1 md:text-3xl font-bold italic ">
-        Import Made Simple.
+        {{__('messages.import_made_simple')}}
       </p>
       
     </div>
 
     <div class="">
       <p class="text-lg opacity-100 tracking-wide">
-        2025 @ Galaxy Traco. All Rights Reserved. Design by Designcub3.com
+        {{__('messages.copyright')}}
       </p>
     </div>
   </div>

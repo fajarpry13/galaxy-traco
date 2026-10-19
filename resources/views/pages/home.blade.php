@@ -12,37 +12,38 @@
 
       <div class="flex flex-col items-center text-center">
         <div class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white">
-          <img src="{{ asset('assets/icons/icon2.png') }}" class="mb-2 w-16 h-16" />
-          <span class="font-bold text-3xl">+250.000</span>
-          <span class="font-bold text-xs uppercase tracking-widest">Goods Imported</span>
+          <img src="{{ asset('assets/icons/icon-3-revisi.png') }}" class="mb-2 w-20 h-auto" />
+          <span class="font-bold text-lg uppercase tracking-widest">{{__('messages.since')}}</span>
+          <span class="font-bold text-3xl">2013</span>
+        </div>
+      </div>
+      
+      <div class="flex flex-col items-center text-center">
+        <div class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white">
+          <img src="{{ asset('assets/icons/icon.png') }}" class="mb-2 w-20 h-auto" />
+          <span class="font-bold text-3xl">+300</span>
+          <span class="font-bold text-lg uppercase tracking-widest">{{__('messages.clients_served')}}</span>
         </div>
       </div>
 
       <div class="flex flex-col items-center text-center">
         <div class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white">
-          <img src="{{ asset('assets/icons/icon.png') }}" class="mb-2 w-16 h-16" />
-          <span class="font-bold text-3xl">+300</span>
-          <span class="font-bold text-xs uppercase tracking-widest">Clients Served</span>
-        </div>
-      </div>
-
-    <div class="flex flex-col items-center text-center">
-        <div class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white">
-          <img src="{{ asset('assets/icons/icon3.png') }}" class="mb-2 w-16 h-16" />
-          <span class="font-bold text-3xl">+1.000.000</span>
-          <span class="font-bold text-xs uppercase tracking-widest">Miles Coverage</span>
+          <img src="{{ asset('assets/icons/icon-1-revisi.png') }}" class="mb-2 w-30 h-auto" />
+          <span class="font-bold text-3xl">+250.000</span>
+          <span class="font-bold text-lg uppercase tracking-widest">{{__('messages.goods_imported')}}</span>
         </div>
       </div>
 
     </div>
 
     <div class="mx-auto mt-20 max-w-4xl text-center">
-      <h2 class="mb-6 font-bold text-green-900 text-3xl md:text-5xl">
-        Simplifying Imports. Empowering Business.
-      </h2>
-      <div class="bg-red-600 mx-auto mb-8 w-16 h-1"></div>
-      <p class="text-gray-600 text-lg leading-relaxed">
-        We are an import expedition service committed to making international shipping simple, fast, and secure. With our door-to-door delivery, you can send imported goods without stress — no complicated processes, no wasted time. Safe, timely, and competitively priced shipping made effortless.
+      <x-section-title border-class="bg-red-600">
+          <h2 class="mb-6 font-bold text-primary text-3xl md:text-4xl">
+              {{__('messages.title')}}
+          </h2>
+      </x-section-title>
+      <p class="text-black text-base leading-relaxed">
+        {{ __('messages.description') }}
       </p>
     </div>
   </div>
@@ -66,10 +67,10 @@
             <img src="{{ asset('/assets/images/logo.png') }}" class="w-full h-auto" alt="Logo">
           </div>
 
-          <h2 class="drop-shadow-lg font-black text-3xl md:text-5xl uppercase leading-tight tracking-tighter">
+          <h2 class="drop-shadow-lg font-bebas text-3xl md:text-5xl uppercase tracking-wide">
             GALAXY TRACO
           </h2>
-          <p class="opacity-90 drop-shadow-md font-medium text-lg md:text-xl uppercase tracking-[0.2em]">
+          <p class="opacity-90 drop-shadow-md font-bebas text-lg md:text-2xl uppercase tracking-wide">
             Video Company Profile
           </p>
         </div>
@@ -94,7 +95,7 @@
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
       <div class="relative flex flex-col justify-center items-center h-full text-white">
         <img src="https://flagcdn.com/w160/cn.png" class="shadow-lg mb-4 w-16" alt="China Flag">
-        <h3 class="font-bold text-4xl tracking-wider">China</h3>
+        <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">China</h3>
       </div>
     </div>
 
@@ -103,7 +104,7 @@
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
       <div class="relative flex flex-col justify-center items-center border-white/10 border-x h-full text-white">
         <img src="https://flagcdn.com/w160/sg.png" class="shadow-lg mb-4 w-16" alt="Singapore Flag">
-        <h3 class="font-bold text-4xl tracking-wider">Singapore</h3>
+        <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Singapore</h3>
       </div>
     </div>
 
@@ -112,19 +113,15 @@
       <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
       <div class="relative flex flex-col justify-center items-center h-full text-white">
         <img src="https://flagcdn.com/w160/th.png" class="shadow-lg mb-4 w-16" alt="Thailand Flag">
-        <h3 class="font-bold text-4xl tracking-wider">Thailand</h3>
+        <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Thailand</h3>
       </div>
     </div>
   </div>
-  <div class="z-10 relative flex flex-col justify-center items-center md:mt-16 md:mb-14 px-4 h-full text-green-900 text-center">
-  <h1 class="drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] font-sans font-bold">
-    <span class="block md:text-5xl text-6xl leading-[0.85] tracking-[-0.em]">
-          Our Services
-    </span>
-    <br>
-    <div class="bg-red-600 mx-auto mb-8 w-16 h-1"></div>
-  </h1>
-  </div>
+<x-section-title border-class="bg-red-600">
+          <h2 class="mb-6 font-bold text-primary text-3xl md:text-5xl">
+              Our Services
+          </h2>
+      </x-section-title>
 </section>
 <section">
   <div class="mx-auto md:mb-16 px-4 container">
@@ -138,9 +135,9 @@
           </div>
         </div>
         <div class="p-8 text-center">
-          <h3 class="mb-4 font-bold text-green-800 text-2xl">Sea Freight</h3>
+          <h3 class="mb-4 font-bold text-green-800 text-2xl">{{__('messages.sea_freight')}}</h3>
           <p class="text-gray-600 leading-relaxed">
-            Shipping by sea is perfect for you who want to send goods in larges size and in large quantities.
+              {{ __('messages.desc_sf') }}
           </p>
         </div>
       </div>
@@ -153,9 +150,9 @@
           </div>
         </div>
         <div class="p-8 text-center">
-          <h3 class="mb-4 font-bold text-green-800 text-2xl">Air Freight</h3>
+          <h3 class="mb-4 font-bold text-primary text-2xl">{{__('messages.air_freight')}}</h3>
           <p class="text-gray-600 leading-relaxed">
-            Air shipping is very suitable for you who want to send goods with a small size but heavy and fast because it only takes 7-10 days.
+            {{ __('messages.desc_af') }}
           </p>
         </div>
       </div>
@@ -168,9 +165,9 @@
           </div>
         </div>
         <div class="p-8 text-center">
-          <h3 class="mb-4 font-bold text-green-800 text-2xl">Import Custom Clearance</h3>
+          <h3 class="mb-4 font-bold text-primary text-2xl">{{__('messages.import_custom_clearance')}}</h3>
           <p class="text-gray-600 leading-relaxed">
-            Send anti-complicated imported goods, because we will take care of all the necessary import documents.
+            {{ __('messages.desc_icc') }}
           </p>
         </div>
       </div>
@@ -183,9 +180,9 @@
           </div>
         </div>
         <div class="p-8 text-center">
-          <h3 class="mb-4 font-bold text-green-800 text-2xl">Door to Door Service</h3>
+          <h3 class="mb-4 font-bold text-primary text-2xl">{{ __('messages.dtd_service') }}</h3>
           <p class="text-gray-600 leading-relaxed">
-            Save more your time with door to door service. We will directly send your imported goods to your address.
+            {{ __('messages.desc_dtd_service') }}
           </p>
         </div>
       </div>
@@ -198,9 +195,9 @@
           </div>
         </div>
         <div class="p-8 text-center">
-          <h3 class="mb-4 font-bold text-green-800 text-2xl">Warehouse</h3>
+          <h3 class="mb-4 font-bold text-primary text-2xl">{{__('messages.warehouse')}}</h3>
           <p class="text-gray-600 leading-relaxed">
-            Our wide warehouse capacity is able to accommodate your imported goods. Your sipmnet is safe in our warehouse.
+            {{ __('messages.desc_warehouse') }}
           </p>
         </div>
       </div>
@@ -213,9 +210,9 @@
           </div>
         </div>
         <div class="p-8 text-center">
-          <h3 class="mb-4 font-bold text-green-800 text-2xl">LCL / FCL</h3>
+          <h3 class="mb-4 font-bold text-primary text-2xl">{{ __('messages.lcl-fcl') }}</h3>
           <p class="text-gray-600 leading-relaxed">
-            Send imported goods according to your needs with the LCL or FCL system.
+            {{ __('messages.desc_lcl-fcl') }}
           </p>
         </div>
       </div>
@@ -226,8 +223,11 @@
 <section class="relative bg-[#006838] bg-blend-multiply bg-cover bg-center bg-fixed py-20" style="background-image: url('{{ asset('assets/images/bg2.png') }}')">
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
-        <h2 class="mb-4 font-bold text-4xl md:text-5xl">Why Makes Us Different?</h2>
-        <div class="bg-white mx-auto mb-16 w-20 h-1"></div>
+        <x-section-title border-class="bg-white">
+          <h2 class="mb-6 font-bold text-white text-3xl md:text-5xl">
+              {{__('messages.why_make_us')}}
+          </h2>
+      </x-section-title>
 
         <div class="gap-12 grid grid-cols-1 md:grid-cols-4">
 
@@ -235,9 +235,9 @@
                 <div>
                     <img src="{{ asset('assets/icons/icon4.png') }}" class="w-24 h-24" alt="Confidentiality">
                 </div>
-                <h3 class="mb-3 font-bold text-xl uppercase tracking-wider">Confidentiality</h3>
+                <h3 class="mb-3 font-bold text-xl uppercase tracking-wider">{{__('messages.confident')}}</h3>
                 <p class="opacity-90 font-medium text-sm leading-relaxed">
-                    We safeguard all client and business information with the highest level of discretion and trust.
+                  {{ __('messages.desc_confident') }}
                 </p>
             </div>
 
@@ -245,9 +245,9 @@
                 <div>
                     <img src="{{ asset('assets/icons/icon5.png') }}" class="w-24 h-24" alt="Partnership">
                 </div>
-                <h3 class="mb-3 font-bold text-xl text-center uppercase tracking-wider">Partnership-Driven Relationship</h3>
+                <h3 class="mb-3 font-bold text-xl text-center uppercase tracking-wider">{{ __('messages.partnership') }}</h3>
                 <p class="opacity-90 font-medium text-sm leading-relaxed">
-                    We build long-term partnerships by working collaboratively and aligning our goals with our clients' success.
+                  {{ __('messages.desc_partnership') }}
                 </p>
             </div>
 
@@ -255,9 +255,9 @@
                 <div>
                     <img src="{{ asset('assets/icons/icon6.png') }}" class="w-24 h-24" alt="Continuous Improvement">
                 </div>
-                <h3 class="mb-3 font-bold text-xl uppercase tracking-wider">Continuous Improvement</h3>
+                <h3 class="mb-3 font-bold text-xl uppercase tracking-wider">{{__('messages.improvement')}}</h3>
                 <p class="opacity-90 font-medium text-sm leading-relaxed">
-                    We consistently enhance our processes, knowledge, and capabilities to deliver better results over time.
+                  {{ __('messages.desc_improvement') }}
                 </p>
             </div>
 
@@ -265,9 +265,9 @@
                 <div>
                     <img src="{{ asset('assets/icons/icon7.png') }}" class="w-24 h-24" alt="Responsibility">
                 </div>
-                <h3 class="mb-3 font-bold text-xl uppercase tracking-wider">Responsibility</h3>
+                <h3 class="mb-3 font-bold text-xl uppercase tracking-wider">{{__('messages.respons')}}</h3>
                 <p class="opacity-90 font-medium text-sm leading-relaxed">
-                    We take full ownership of our commitments and actions, ensuring reliability, accountability, and integrity in everything we do.
+                  {{ __('messages.desc_respons') }}
                 </p>
             </div>
 
@@ -277,15 +277,14 @@
 
 <section class="relative bg-[#8B0000] pt-20 pb-0 overflow-hidden">
   <div class="mx-auto px-4 text-center container">
-
-    <h2 class="mb-4 font-bold text-white text-3xl md:text-5xl">
-      Galaxy Traco Smart Client Dashboard
-    </h2>
-    <div class="bg-green-700 mx-auto mb-10 w-16 h-0.5"></div>
+    <x-section-title border-class="bg-primary">
+          <h2 class="mb-4 font-bold text-white text-3xl md:text-5xl">
+                  {{ __('messages.galaxy_smart_dashboard') }}
+          </h2>
+      </x-section-title>
 
     <p class="mx-auto mb-12 max-w-4xl text-white/90 text-lg leading-relaxed">
-      The Galaxy Traco Smart Client Dashboard provides customers with easy and secure access to real-time shipping information.
-      Through this dashboard, and stay updated at every stage of the logistics process—accessible seamlessly on both smartphones and desktop devices.
+      {{ __('messages.desc_galaxy_smart_dashboard') }}
     </p>
 
     <div class="relative mx-auto mb-10 max-w-5xl">
@@ -299,7 +298,7 @@
     </div>
 
     <a href="#" class="inline-block bg-green-700 hover:bg-green-800 mb-16 px-10 py-3 rounded-lg font-bold text-white transition duration-300">
-      Request Demo
+      {{__('messages.request_demo')}}
     </a>
 
   </div>
@@ -308,8 +307,11 @@
 <section class="bg-white py-20">
   <div class="mx-auto px-4 container">
     <div class="mb-16 text-center">
-      <h2 class="mb-6 font-bold text-green-900 text-3xl md:text-5xl"> Our Workflow</h2>
-      <div class="bg-red-800 mx-auto mb-16 w-20 h-1"></div>
+    <x-section-title border-class="bg-red-600">
+          <h2 class="mb-6 font-bold text-green-900 text-3xl md:text-5xl">
+              {{ __('messages.our_workflow') }}
+          </h2>
+      </x-section-title>
       <img src="{{ 'assets/images/workflow.png' }}" alt="Container-Workflow">
 
     </div>
@@ -319,18 +321,18 @@
     <div class="absolute inset-0 bg-black/50"></div>
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
-        <h2 class="mb-4 font-bold text-4xl md:text-5xl">Strategic Warehouse Locations</h2>
-        <div class="bg-red-600 mx-auto mb-8 w-16 h-1"></div>
+        <x-section-title border-class="bg-red-600">
+          <h2 class="mb-6 font-bold text-white text-3xl md:text-5xl">
+                    {{__('messages.strategic_warehouse')}}
+          </h2>
+      </x-section-title>
 
         <p class="opacity-90 mx-auto max-w-6xl text-lg md:text-xl leading-relaxed">
-            Galaxy Traco operates 4 warehouse locations in Guangzhou, Yiwu, Singapore and Bangkok, giving you
-            flexibility and faster processing. Suppliers can send goods to the nearest warehouse, reducing domestic
-            shipping time and cost. Each warehouse supports secure storage, item checks, consolidation from multiple
-            suppliers, and export preparation — ensuring your shipment is processed efficiently and accurately.
+          {{ __('messages.desc_strategic_warehouse') }}
         </p>
 
         <p class="mt-8 font-bold text-xl md:text-xl">
-           With this network, your imports move faster, safer, and more smoothly from factory to destination.
+          {{ __('messages.desc2_strategic_warehouse') }}
         </p>
     </div>
 </section>
@@ -340,14 +342,14 @@
     <div class="group relative flex-1 overflow-hidden cursor-pointer">
       <img src="{{ asset('assets/images/guangzhou.png') }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Singapore">
             <div class="relative flex flex-col justify-center items-center border-white/10 border-x h-full text-white">
-               <h3 class="font-bold text-4xl tracking-wider">Guangzhou, China</h3>
+               <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Guangzhou, China</h3>
       </div>
     </div>
 
     <div class="group relative flex-1 overflow-hidden cursor-pointer">
       <img src="{{ asset('assets/images/yiwu-city.png') }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="China">
            <div class="relative flex flex-col justify-center items-center h-full text-white">
-              <h3 class="font-bold text-4xl tracking-wider">Yiwu City, China </h3>
+              <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Yiwu City, China </h3>
       </div>
     </div>
 
@@ -355,14 +357,14 @@
     <div class="group relative flex-1 overflow-hidden cursor-pointer">
       <img src="{{ asset('assets/images/singapore2.png') }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thailand">
             <div class="relative flex flex-col justify-center items-center h-full text-white">
-               <h3 class="font-bold text-4xl tracking-wider">Singapore</h3>
+               <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Singapore</h3>
       </div>
     </div>
 
       <div class="group relative flex-1 overflow-hidden cursor-pointer">
       <img src="{{ asset('assets/images/bangkok.png') }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Thailand">
             <div class="relative flex flex-col justify-center items-center h-full text-white">
-               <h3 class="font-bold text-4xl tracking-wider">Bangkok, Thailand</h3>
+               <h3 class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Bangkok, Thailand</h3>
       </div>
     </div>
   </div>
@@ -371,43 +373,49 @@
 
 <section class="py-20">
     <div class="mx-auto px-4 container">
-        <h2 class="mb-10 font-bold text-green-900 text-3xl md:text-5xl text-center">Insights</h2>
-        <div class="bg-red-800 mx-auto mb-16 w-20 h-1"></div>
+        <x-section-title border-class="bg-red-600">
+          <h2 class="mb-6 font-bold text-primary text-3xl md:text-5xl">
+              {{__('messages.insights')}}
+          </h2>
+      </x-section-title>
         <div class="gap-10 grid grid-cols-3 md:grid-cols-3">
+          @foreach ($articles as $article)
             <div class="group cursor-pointer">
+                <div class="mb-4 rounded-lg overflow-hidden">
+                    <img src="{{ $article->image }}" alt="{{ $article->title }}" class="object-cover aspect-video">
+                </div>
+                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">{{ $article->title }} </h3>
+                <p class="mt-2 text-gray-500 text-sm line-clamp-5">{{ $article->description }} </p>
+
+            </div>  
+          @endforeach
+            {{-- <div class="group cursor-pointer">
                 <div class="mb-4 rounded-lg overflow-hidden">
                     <img src="assets/images/importing-goods.png" class="object-cover aspect-video">
                 </div>
-                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">What You Need to Know Before Importing Goods from Overseas </h3>
-                <p class="mt-2 text-gray-500 text-sm line-clamp-5">Importing goods can open doors to bigger business opportunities — better pricing,
-                  unique product supply, and access to global manufacturers. However,
-                  before you begin, there are a few key things you must understand   </p>
+                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">{{__('messages.title_article1')}} </h3>
+                <p class="mt-2 text-gray-500 text-sm line-clamp-5">{{__('messages.desc_article1')}} </p>
 
             </div>
             <div class="group cursor-pointer">
                 <div class="mb-4 rounded-lg overflow-hidden">
                     <img src="assets/images/many-business.png" class="object-cover aspect-video">
                 </div>
-                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">The Easiest Way to Import Goods: Door-to-Door Shipping </h3>
-                <p class="mt-2 text-gray-500 text-sm line-clamp-5">For many business owners, the most challenging part of importing isn't
-                  finding products — it's handling the process: shipping, customs, paperwork, taxes, and delivery,
-                  That's where door-to-door import services make a </p>
+                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">{{ __('messages.title_article2') }}</h3>
+                <p class="mt-2 text-gray-500 text-sm line-clamp-5">{{__('messages.desc_article2')}}</p>
 
             </div>
             <div class="group cursor-pointer">
                 <div class="mb-4 rounded-lg overflow-hidden">
                     <img src="assets/images/china-remains.png" class="object-cover aspect-video">
                 </div>
-                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">Trending Products in China: Ideas to Inspire Your Next Business Move </h3>
-                <p class="mt-2 text-gray-500 text-sm line-clamp-5">China remains one of the biggest product innovation hubs, and trends change fast — giving
-                  endless opportunities for new business ideas.
-                  If you're planning your next import move, here are some categories currently </p>
-
-            </div>
+                <h3 class="font-bold text-green-900 group-hover:text-green-600 transition">{{ __('messages.title_article3') }} </h3>
+                <p class="mt-2 text-gray-500 text-sm line-clamp-5">{{__('messages.desc_article3')}} </p>
+            </div> --}}
             </div>
 
         <div class="mt-16 text-center">
-            <a href="{{ route('insight') }}" class="bg-red-700 hover:bg-red-800 px-8 py-3 rounded-full font-bold text-white transition">See All Articles</a>
+            <a href="{{ route('insight') }}" class="bg-red-700 hover:bg-red-800 px-8 py-3 rounded-full font-bold text-white transition">{{ __('messages.see_all_articles') }}</a>
         </div>
     </div>
 </section>
@@ -416,8 +424,11 @@
     <div class="absolute inset-0 bg-green-800/90"></div>
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
-        <h2 class="mb-4 font-bold text-4xl md:text-5xl">Testimonial</h2>
-        <div class="bg-red-600 mx-auto mb-16 w-16 h-1"></div>
+        <x-section-title border-class="bg-red-600">
+          <h2 class="mb-6 font-bold text-white text-3xl md:text-5xl">
+            {{ __('messages.testimonial') }}
+          </h2>
+      </x-section-title>
 
         <div class="relative mx-auto max-w-280">
 

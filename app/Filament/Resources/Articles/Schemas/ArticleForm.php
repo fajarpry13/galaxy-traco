@@ -4,9 +4,9 @@ namespace App\Filament\Resources\Articles\Schemas;
 
 use App\ArticleStatus;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Repeater;
 use Filament\Schemas\Schema;
 
 class ArticleForm
@@ -17,7 +17,18 @@ class ArticleForm
             ->components([
                 TextInput::make('title')
                     ->required(),
-                TextInput::make('description')
+                RichEditor::make('description')
+                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'codeBlock',
+                                        'bulletList',
+                                        'orderedList',
+                                        'blockquote',
+                                        ])
                     ->required(),
                 FileUpload::make('image')
                     ->image(),
@@ -25,16 +36,6 @@ class ArticleForm
                     ->options(ArticleStatus::class)
                     ->default('pending')
                     ->required(),
-
-                Repeater::make('selection')
-                ->schema([
-                    TextInput::make('heading')
-                    ->required(),
-                TextInput::make('content')
-                    ->required(),
-                ])
             ]);
-
     }
-
 }

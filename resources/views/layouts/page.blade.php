@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/png">
+    @livewireStyles()
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class=" overflow-x-hidden bg-no-repeat bg-cover bg-center bg-fixed" >
@@ -20,5 +21,6 @@
 
 
 @include('partials.footer')
+@livewireScripts
 </body>
 </html>

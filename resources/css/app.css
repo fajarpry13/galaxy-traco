@@ -7,17 +7,21 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@font-face {
+/* @font-face {
   font-family: 'Gotham-ultra';
-  src: url('/fonts/Gotham-Ultra.ttf') format('truetype');src: url();
+  src: url('/fonts/Gotham-Ultra.ttf') format('truetype');
 
-}
+} */
+
 
 @theme {
     --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-bebas: "Bebas Neue", sans-serif;
-   --font-goth: "Gotham-ultra", sans-serif;
+    --font-bebas: 'Bebas Neue', sans-serif;
+   --font-goth: 'Gotham-ultra', sans-serif;
+
+   --color-primary: #006838;
+   --color-button: #278425;
 }
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -25,4 +29,11 @@
 }
 .animate-bounce {
   animation: bounce 2s infinite;
+}
+
+.btn-green {
+  @apply bg-button cursor-pointer rounded-2xl px-4 py-3 hover:bg-primary transition-colors pointer-events-auto;
+}
+.nav-link {
+  @apply px-0.5 py-1.5 pb-1 border-red-600 hover:border-b-2 font-semibold;
 }

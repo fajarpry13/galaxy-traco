@@ -1,37 +1,21 @@
 <?php
 
-
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/', function(){
-    return view ('pages.home');
-})->name('home');
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+], function() {
 
-Route::get('/about', function(){
-    return view ('pages.about');
-})->name('about');
+    Route::get('/', [App\Http\Controllers\HomeController::class,'index'])->name('home');    
+    Route::get('/insight/{slug?}', [ArticleController::class, 'index'])->name('insight');
+    // Route::get('/insight/{slug}', [ArticleController::class, 'show'])->name('insight.show');
 
-Route::get('/services', function(){
-    return view ('pages.services');
-})->name('services');
 
-Route::get('/reasons', function(){
-    return view ('pages.reasons');
-})->name('reasons');
-Route::get('/workflow', function(){
-    return view ('pages.workflow');
-})->name('workflow');
-Route::get('/insight', function(){
-    return view ('pages.insight');
-})->name('insight');
-
-Route::get('/contact', function(){
-    return view ('pages.contact');
-})->name('contact');
+});
 
 
 
