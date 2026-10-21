@@ -4,16 +4,16 @@
         scrolled: false 
     }"
     x-init="
-        if (isHome) {
-            window.addEventListener('scroll', () => { scrolled = window.scrollY > 500 });
-        }
+            window.addEventListener('scroll', () => { scrolled = window.scrollY > 50 });
     "
     :class="{
-        'top-0 z-50 justify-center py-6 w-full transition-all duration-300 flex items-center': true,
+        'top-0 z-50 justify-center  w-full transition-all duration-300 flex items-center': true,
         'fixed': isHome,
-        'sticky bg-white shadow-md': !isHome,
-        'bg-transparent': isHome && !scrolled,
-        'bg-white shadow-md': isHome && scrolled
+        'sticky bg-[rgba(255,255,255,0.75)] shadow-md': !isHome,
+        'bg-transparent py-6': isHome && !scrolled,
+        'bg-[rgba(255,255,255,0.75)] shadow-md': isHome && scrolled,
+        'py-6': !isHome && !scrolled,
+        'py-0': !isHome && scrolled
     }"
 >
     <div class="container mx-auto flex items-center justify-between px-4 md:px-8 2xl:px-16">
