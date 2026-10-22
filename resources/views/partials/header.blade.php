@@ -24,24 +24,75 @@
                     ? '{{ asset('assets/icons/font-black-gtraco.png') }}' 
                     : '{{ asset('assets/icons/font-white-gtraco.png') }}'" 
                 alt="Galaxy Traco Logo" 
-                class="h-auto w-45 2xl:w-60 transition-all duration-300"
+                class="h-auto transition-all duration-300"
+                :class="{
+                    'w-[200px] py-[10px]' : scrolled,
+                    'w-45 2xl:w-60' : !scrolled
+                }"
             />
         </a>
 
         <!-- NAVIGATION LINKS -->
-        <nav :class="{
+        {{-- <nav :class="{
             'hidden md:flex flex-1 justify-end items-center uppercase space-x-8': true,
             'text-black': !isHome || scrolled,
             'text-white': isHome && !scrolled
         }">
             <a href="{{ route('home') }}" class="nav-link text-sm 2xl:text-base {{ request()->routeIs('home') ? 'border-b-2' : '' }}">{{ __('messages.home') }}</a>
-            <a href="#" class="nav-link text-sm 2xl:text-base {{ request()->routeIs('about') ? 'border-b-2' : '' }}">{{ __('messages.about') }}</a>
-            <a href="#" class="nav-link text-sm 2xl:text-base {{ request()->routeIs('services') ? 'border-b-2' : '' }}">{{ __('messages.services') }}</a>
-            <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.why_us') }}</a>
-            <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.workflow') }}</a>
+            <a href="{{ route('home') }}#about" class="nav-link text-sm 2xl:text-base {{ request()->routeIs('about') ? 'border-b-2' : '' }}">{{ __('messages.about') }}</a>
+            <a href="{{ route('home') }}#service" class="nav-link text-sm 2xl:text-base {{ request()->routeIs('services*') ? 'border-b-2' : '' }}">{{ __('messages.services') }}</a>
+            <a href="{{ route('home') }}#why" class="nav-link text-sm 2xl:text-base">{{ __('messages.why_us') }}</a>
+            <a href="{{ route('home') }}#workflow" class="nav-link text-sm 2xl:text-base">{{ __('messages.workflow') }}</a>
             <a href="{{ route('insight') }}" class="nav-link text-sm 2xl:text-base {{ request()->routeIs('insight') ? 'border-b-2' : '' }}">{{ __('messages.insights') }}</a>
             <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.contact') }}</a>
-        </nav>
+        </nav> --}}
+
+       <nav class="hidden md:flex flex-1 justify-end items-center uppercase space-x-8" 
+     x-data="{ activeSection: 'home' }"
+     @@section-change.window="activeSection = $event.detail">
+     
+     
+    <a href="{{ route('home') }}" 
+       class="nav-link text-sm 2xl:text-base transition-all"
+       :class="activeSection === 'home' ? 'border-b-2 border-red-600' : ''">
+        {{ __('messages.home') }}
+    </a>
+
+    <a href="{{ route('home') }}#about" 
+       class="nav-link text-sm 2xl:text-base transition-all"
+       :class="activeSection === 'about' ? 'border-b-2 border-red-600' : ''">
+        {{ __('messages.about') }}
+    </a>
+
+    <a href="{{ route('home') }}#service" 
+       class="nav-link text-sm 2xl:text-base transition-all"
+       :class="activeSection === 'service' ? 'border-b-2 border-red-600' : ''">
+        {{ __('messages.services') }}
+    </a>
+
+    <a href="{{ route('home') }}#why" 
+       class="nav-link text-sm 2xl:text-base transition-all"
+       :class="activeSection === 'why' ? 'border-b-2 border-red-600' : ''">
+        {{ __('messages.why_us') }}
+    </a>
+
+    <a href="{{ route('home') }}#workflow" 
+       class="nav-link text-sm 2xl:text-base transition-all"
+       :class="activeSection === 'workflow' ? 'border-b-2 border-red-600' : ''">
+        {{ __('messages.workflow') }}
+    </a>
+
+      <a href="{{ route('home') }}#insight" 
+       class="nav-link text-sm 2xl:text-base transition-all"
+       :class="activeSection === 'insight' ? 'border-b-2 border-red-600' : ''">
+        {{ __('messages.insights') }}
+    </a>
+
+       <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.contact') }}</a>
+
+
+    
+</nav>
         
         <!-- LANGUAGE SWITCHER -->
         <div class="relative inline-block pl-12 pr-2" x-data="{ open: false }">

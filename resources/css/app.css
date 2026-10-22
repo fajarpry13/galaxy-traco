@@ -37,3 +37,24 @@
 .nav-link {
   @apply px-0.5 py-1.5 pb-1 border-red-600 hover:border-b-2 font-semibold;
 }
+.splide__arrow--prev.review-arrow {
+  @apply -left-20;
+}
+
+.splide__arrow--next.review-arrow {
+  @apply -right-20;
+}
+
+.review-arrow svg {
+  width: 2rem !important;  
+  height: 2rem !important; 
+}
+.splide:focus-visible,
+.splide__track:focus-visible,
+.splide__slide:focus-visible {
+    outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
