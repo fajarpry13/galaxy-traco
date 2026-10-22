@@ -54,9 +54,10 @@
      
     <a href="{{ route('home') }}" 
        class="nav-link text-sm 2xl:text-base transition-all"
-       :class="activeSection === 'home' ? 'border-b-2 border-red-600' : ''">
+       :class="activeSection === 'home' && {{ request()->routeIs('home') }} ? 'border-b-2 border-red-600' : ''">
         {{ __('messages.home') }}
     </a>
+    
 
     <a href="{{ route('home') }}#about" 
        class="nav-link text-sm 2xl:text-base transition-all"
@@ -84,7 +85,7 @@
 
       <a href="{{ route('home') }}#insight" 
        class="nav-link text-sm 2xl:text-base transition-all"
-       :class="activeSection === 'insight' ? 'border-b-2 border-red-600' : ''">
+       :class="activeSection === 'insight' || {{ request()->routeIs('insight*') ? 'true' : 'false' }} ? 'border-b-2 border-red-600' : ''">
         {{ __('messages.insights') }}
     </a>
 
