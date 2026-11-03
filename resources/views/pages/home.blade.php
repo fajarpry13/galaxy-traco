@@ -7,41 +7,41 @@
 @include('main.hero')
 
  <!-- ICONS SECTION -->
-    <section class="z-30 relative -mt-24 pb-20"> 
+    <section class="z-30 relative md:-mt-24 md:pb-20 md:py-0 py-12"> 
       <div class="mx-auto px-4 container">
     <div  x-data="{shown: false}"
           x-intersect:enter.threshold.50="shown = true"
           x-intersect:leave.threshold.50="shown = false"
           id="home"
           x-intersect="$dispatch('section-change','home')"
-          class="flex flex-wrap justify-center gap-10 md:gap-20 -translate-y-12">
+          class="flex flex-wrap justify-center gap-10 md:gap-20 md:-translate-y-12">
       <div class="flex flex-col items-center text-center">
         <div :class="shown ? ' opacity-100' : 'opacity-0'" 
-             class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white
+             class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-60 md:w-75 h-60 md:h-75 text-white
              transition-all ease-in-out delay-0 duration-400">
-          <img src="{{ asset('assets/icons/icon-3-revisi.png') }}" class="mb-2 w-20 h-auto" />
-          <span class="font-bold text-lg uppercase tracking-widest">{{__('messages.since')}}</span>
-          <span class="font-bold text-3xl">2013</span>
+          <img src="{{ asset('assets/icons/icon-3-revisi.png') }}" class="mb-2 w-15 md:w-20 h-auto" />
+          <span class="font-bold text-base md:text-lg uppercase tracking-widest">{{__('messages.since')}}</span>
+          <span class="font-bold text-lg md:text-3xl">2013</span>
         </div>
       </div>
       
       <div class="flex flex-col items-center text-center">
         <div :class="shown ? ' opacity-100' : 'opacity-0'"  
-            class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white
+            class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-60 md:w-75 h-60 md:h-75 text-white
              transition-all ease-in-out delay-150 duration-400">
-          <img src="{{ asset('assets/icons/icon.png') }}" class="mb-2 w-20 h-auto" />
-          <span class="font-bold text-3xl">+300</span>
-          <span class="font-bold text-lg uppercase tracking-widest">{{__('messages.clients_served')}}</span>
+          <img src="{{ asset('assets/icons/icon.png') }}" class="mb-2 w-15 md:w-20 h-auto" />
+          <span class="font-bold text-lg md:text-3xl">+300</span>
+          <span class="font-bold text-base md:text-lg uppercase tracking-widest">{{__('messages.clients_served')}}</span>
         </div>
       </div>
 
       <div class="flex flex-col items-center text-center">
         <div :class="shown ? ' opacity-100' : 'opacity-0'"  
-            class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-40 md:w-75 h-40 md:h-75 text-white
+            class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-60 md:w-75 h-60 md:h-75 text-white
              transition-all ease-in-out delay-300 duration-400">
-          <img src="{{ asset('assets/icons/icon-1-revisi.png') }}" class="mb-2 w-30 h-auto" />
-          <span class="font-bold text-3xl">+250.000</span>
-          <span class="font-bold text-lg uppercase tracking-widest">{{__('messages.goods_imported')}}</span>
+          <img src="{{ asset('assets/icons/icon-1-revisi.png') }}" class="mb-2 w-15 md:w-20 h-auto" />
+          <span class="font-bold text-lg md:text-3xl">+250.000</span>
+          <span class="font-bold text-base md:text-lg uppercase tracking-widest">{{__('messages.goods_imported')}}</span>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@
           x-intersect:leave.threshold.50="shown = false"
           id="about" 
           x-intersect="$dispatch('section-change','about')"
-          class="mx-auto mt-20 max-w-4xl text-center">
+          class="mx-auto md:mt-20 max-w-4xl text-center">
       <x-section-title border-class="bg-red-600" >
           <h2 :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
               class="mb-6 font-bold text-primary text-3xl md:text-4xl">
@@ -64,7 +64,7 @@
     </div>
   </div>
 </section>
-<section class="pb-20">
+<section class="py-12 md:pb-20">
   <div class="mx-auto px-4 container">
     <div class="group relative shadow-2xl mx-auto rounded-2xl max-w-5xl overflow-hidden">
 
@@ -79,7 +79,7 @@
 
         <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
 
-          <div class="flex justify-center items-center bg-white/90 shadow-2xl backdrop-blur-sm mb-4 p-4 rounded-full w-32 md:w-48 h-32 md:h-48">
+          <div class="flex justify-center items-center bg-white/90 shadow-2xl backdrop-blur-sm mt-4 md:mt-0 md:mb-4 p-4 rounded-full w-18 md:w-48 h-18 md:h-48">
             <img src="{{ asset('/assets/images/logo.png') }}" class="w-full h-auto" alt="Logo">
           </div>
 
@@ -94,7 +94,7 @@
         {{-- Play Button --}}
         <div class="absolute inset-0 flex justify-center items-center">
           <button class="rounded-full transition cursor-pointer">
-            <img src="{{ asset('assets/icons/play-button.png') }}" class="size-36" alt="Play Button">
+            <img src="{{ asset('assets/icons/play-button.png') }}" class="size-18 md:size-36" alt="Play Button">
           </button>
         </div>
       </div>
@@ -103,7 +103,7 @@
   </div>
 </section>
 
-<section class="z-40 relative w-full">
+<section class="z-20 relative w-full">
   <div  x-data="{shown: false}"
         x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false"
@@ -284,7 +284,7 @@
   </div>
 </section>
 
-<section class="relative bg-primary bg-blend-multiply bg-cover bg-center bg-fixed py-20" style="background-image: url('{{ asset('assets/images/bg2.png') }}')">
+<section class="relative bg-primary bg-blend-multiply bg-cover bg-center bg-fixed py-12 md:py-20" style="background-image: url('{{ asset('assets/images/bg2.png') }}')">
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
       <div x-data="{shown: false}"
@@ -372,7 +372,7 @@
     </div>
 </section>
 
-<section class="relative bg-[#8B0000] pt-20 pb-0 overflow-hidden">
+<section class="relative bg-[#8B0000] py-12 md:pt-20 pb-0 overflow-hidden">
   <div  x-data="{shown: false}"
           x-intersect:enter.threshold.50="shown = true"
           x-intersect:leave.threshold.50="shown = false"
@@ -417,12 +417,12 @@
               {{ __('messages.our_workflow') }}
           </h2>
       </x-section-title>
-      <img src="{{ 'assets/images/workflow.png' }}" alt="Container-Workflow">
+      <img src="{{ 'assets/images/workflow.png' }}" alt="Container-Workflow" class="w-full h-full object-cover">
 
     </div>
   </div>
 </section>
-<section class="relative bg-cover bg-center py-54" style="background-image: url('{{ asset('assets/images/strategic-warehouse.png') }}')">
+<section class="relative bg-cover bg-center py-12 md:py-54" style="background-image: url('{{ asset('assets/images/strategic-warehouse.png') }}')">
     <div class="absolute inset-0 bg-black/50"></div>
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
@@ -449,7 +449,7 @@
         x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false"
         :class="shown ? 'opacity-100 duration-200 delay-300' : 'opacity-0 duration-200 delay-300'" 
-          class="mt-8 font-bold text-xl md:text-xl">
+          class="mt-8 font-bold text-lg md:text-xl">
           {{ __('messages.desc2_strategic_warehouse') }}
         </p>
     </div>
@@ -505,7 +505,7 @@
 
 </section>
 
-<section class="py-20">
+<section class="py-0 md:py-20">
     <div class="mx-auto px-4 container">
       <div x-data="{shown: false}"
           x-intersect:enter.threshold.50="shown = true"
@@ -517,7 +517,7 @@
           </h2>
       </x-section-title>
       </div>
-        <div class="gap-10 grid grid-cols-3 md:grid-cols-3">
+        <div class="gap-10 grid grid-cols-1 md:grid-cols-3">
           @foreach ($articles as $article)
             <div class="group cursor-pointer">
                 <div class="mb-4 rounded-lg overflow-hidden">

@@ -7,6 +7,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "andreiio/blade-remix-icon": "^3.9",
+        "codeat3/blade-solar-icons": "^1.4",
         "diglactic/laravel-breadcrumbs": "^10.1",
         "filament/filament": "~4.0",
         "laravel/framework": "^12.0",
@@ -16,6 +18,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "fruitcake/laravel-debugbar": "^4.4",
         "laravel/boost": "^2.0",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.24",
