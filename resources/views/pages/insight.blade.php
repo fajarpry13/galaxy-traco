@@ -5,8 +5,9 @@
 @section('content')
 
 @include('main.insight')
+<section class="bg-[#cfcfce]">
 
-<section class="container mx-auto px-4 md:px-8 py-4">
+<section class="container mx-auto px-4 md:px-8 py-4 md:py-10">
   <div class="flex flex-col text-white ">
     <div class="relative container mx-auto bg-[#606161] text-black">
         {{ Breadcrumbs::render('insight') }}
@@ -19,6 +20,8 @@
         </div> --}}
   </div>
 </section>
+</section>
+
 
 @endsection
 

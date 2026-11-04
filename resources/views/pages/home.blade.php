@@ -7,14 +7,12 @@
 @include('main.hero')
 
  <!-- ICONS SECTION -->
-    <section class="z-30 relative md:-mt-24 md:pb-20 md:py-0 py-12"> 
+    <section id="about" class="scrollspy z-30 relative md:-mt-24 md:pb-20 md:py-0 py-12 scroll-mt-55"> 
       <div class="mx-auto px-4 container">
     <div  x-data="{shown: false}"
-          x-intersect:enter.threshold.50="shown = true"
-          x-intersect:leave.threshold.50="shown = false"
-          id="home"
-          x-intersect="$dispatch('section-change','home')"
-          class="flex flex-wrap justify-center gap-10 md:gap-20 md:-translate-y-12">
+          x-intersect:enter.half="shown = true"
+          x-intersect:leave.half="shown = false"
+          class="flex flex-wrap justify-center gap-10 md:gap-20 md:-translate-y-12 scroll-mt-24">
       <div class="flex flex-col items-center text-center">
         <div :class="shown ? ' opacity-100' : 'opacity-0'" 
              class="flex flex-col justify-center items-center bg-red-600 shadow-xl rounded-full w-60 md:w-75 h-60 md:h-75 text-white
@@ -48,8 +46,6 @@
   <div  x-data="{shown: false}"
           x-intersect:enter.threshold.50="shown = true"
           x-intersect:leave.threshold.50="shown = false"
-          id="about" 
-          x-intersect="$dispatch('section-change','about')"
           class="mx-auto md:mt-20 max-w-4xl text-center">
       <x-section-title border-class="bg-red-600" >
           <h2 :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
@@ -142,12 +138,12 @@
     </div>
   </div>
 </section>
-<section>
+<section id="service" class="scrollspy scroll-mt-47">
 <div x-data="{shown: false}"
         x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false">
   <x-section-title border-class="bg-red-600">
-           <h2  x-intersect="$dispatch('section-change', 'service')" id="service" :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
+           <h2  :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                 class="mb-6 font-bold text-primary text-3xl md:text-5xl">
                 Our Services
             </h2>
@@ -284,14 +280,14 @@
   </div>
 </section>
 
-<section class="relative bg-primary bg-blend-multiply bg-cover bg-center bg-fixed py-12 md:py-20" style="background-image: url('{{ asset('assets/images/bg2.png') }}')">
+<section id="why" class="scrollspy scroll-mt-27 relative bg-primary bg-blend-multiply bg-cover bg-center bg-fixed py-12 md:py-20" style="background-image: url('{{ asset('assets/images/bg2.png') }}')">
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
       <div x-data="{shown: false}"
         x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false"> 
         <x-section-title border-class="bg-white">
-            <h2 id="why" x-intersect="$dispatch('section-change','why')" :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
+            <h2  :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                 class="mb-6 font-bold text-white text-3xl md:text-5xl">
                 {{__('messages.why_make_us')}}
             </h2>
@@ -374,8 +370,8 @@
 
 <section class="relative bg-[#8B0000] py-12 md:pt-20 pb-0 overflow-hidden">
   <div  x-data="{shown: false}"
-          x-intersect:enter.threshold.50="shown = true"
-          x-intersect:leave.threshold.50="shown = false"
+          x-intersect:enter.threshold.5="shown = true"
+          x-intersect:leave.threshold.20="shown = false"
           :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
         class="mx-auto px-4 text-center container">
     <x-section-title border-class="bg-primary">
@@ -405,7 +401,7 @@
   </div>
 </section>
 
-<section class="bg-white py-20">
+<section id="workflow" class="scrollspy scroll-mt-26 bg-white py-20">
   <div  x-data="{shown: false}"
         x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false"
@@ -413,7 +409,7 @@
         class="mx-auto px-4 container">
     <div class="mb-16 text-center">
     <x-section-title border-class="bg-red-600">
-          <h2 id="workflow" x-intersect="$dispatch('section-change','workflow')" class="mb-6 font-bold text-green-900 text-3xl md:text-5xl">
+          <h2  class="mb-6 font-bold text-green-900 text-3xl md:text-5xl">
               {{ __('messages.our_workflow') }}
           </h2>
       </x-section-title>
@@ -505,14 +501,14 @@
 
 </section>
 
-<section class="py-0 md:py-20">
+<section id="insight" class="scrollspy scroll-mt-24 py-0 md:py-20">
     <div class="mx-auto px-4 container">
       <div x-data="{shown: false}"
           x-intersect:enter.threshold.50="shown = true"
           x-intersect:leave.threshold.50="shown = false"
           :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'">
         <x-section-title border-class="bg-red-600">
-          <h2 id="insight" x-intersect="$dispatch('section-change','insight')" class="mb-6 font-bold text-primary text-3xl md:text-5xl">
+          <h2  class="mb-6 font-bold text-primary text-3xl md:text-5xl">
               {{__('messages.insights')}}
           </h2>
       </x-section-title>

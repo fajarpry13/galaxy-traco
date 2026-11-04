@@ -1,4 +1,7 @@
-   <section class="relative bg-cover w-full h-screen overflow-hidden" style="background-image: url('{{ asset('/assets/images/bg.png') }}')">
+   <section class="scrollspy relative bg-cover w-full h-screen overflow-hidden scroll-mt-0" style="background-image: url('{{ asset('/assets/images/bg.png') }}')"
+          x-data="{shown: false}"
+          id="home"
+   >
       @if (!empty($hero?->video_background))
       <video
           autoplay

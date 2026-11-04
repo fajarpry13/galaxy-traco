@@ -55,6 +55,8 @@ return [
     'import_made_simple' => '让进口变得简单',
     'trusted_solution' => '值得信赖的解决方案',
     'to_import' => '进口海外货物',
+    'need_to_import' => '需要进口还是出口？',
+    'let_us' => '物流交给我们来处理！',
 ];
 
 ?>

@@ -1,4 +1,5 @@
 <header 
+    id="navbar-scrollspy"
     x-data="{ 
         isHome: {{ request()->routeIs('home') ? 'true' : 'false' }},
         mobileMenuIsOpen: false,
@@ -57,49 +58,44 @@
             <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.contact') }}</a>
         </nav> --}}
 
-       <nav class="hidden md:flex flex-1 justify-end items-center uppercase space-x-8" 
-     x-data="{ activeSection: 'home' }"
-     @@section-change.window="activeSection = $event.detail">
+       <nav class="hidden md:flex flex-1 justify-end items-center uppercase space-x-8">
      
      
-    <a href="{{ route('home') }}" 
-       class="nav-link text-sm 2xl:text-base"
-       :class="activeSection === 'home' && {{ request()->routeIs('home') }} ? 'border-b-2 border-red-600' : ''">
+    <a href="{{ route('home') }}#home" 
+       class="nav-link active">
         {{ __('messages.home') }}
     </a>
     
 
-    <a href="{{ route('home') }}#about" 
-       class="nav-link text-sm 2xl:text-base"
-       :class="activeSection === 'about' ? 'border-b-2 border-red-600' : ''">
+    <a href="#about" 
+       class="nav-link">
         {{ __('messages.about') }}
     </a>
 
-    <a href="{{ route('home') }}#service" 
-       class="nav-link text-sm 2xl:text-base"
-       :class="activeSection === 'service' ? 'border-b-2 border-red-600' : ''">
+    <a href="#service" 
+       class="nav-link">
         {{ __('messages.services') }}
     </a>
 
-    <a href="{{ route('home') }}#why" 
-       class="nav-link text-sm 2xl:text-base"
-       :class="activeSection === 'why' ? 'border-b-2 border-red-600' : ''">
+    <a href="#why" 
+       class="nav-link">
         {{ __('messages.why_us') }}
     </a>
 
-    <a href="{{ route('home') }}#workflow" 
-       class="nav-link text-sm 2xl:text-base"
-       :class="activeSection === 'workflow' ? 'border-b-2 border-red-600' : ''">
+    <a href="#workflow" 
+       class="nav-link">
         {{ __('messages.workflow') }}
     </a>
 
-      <a href="{{ route('home') }}#insight" 
-       class="nav-link text-sm 2xl:text-base"
-       :class="activeSection === 'insight' || {{ request()->routeIs('insight*') ? 'true' : 'false' }} ? 'border-b-2 border-red-600' : ''">
+      <a href="#insight" 
+       class="nav-link">
         {{ __('messages.insights') }}
     </a>
 
-       <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.contact') }}</a>
+       <a href="{{ route('contact') }}" 
+       class="nav-link">
+       {{ __('messages.contact') }}
+    </a>
 
 </nav>
 

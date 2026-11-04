@@ -55,6 +55,9 @@ return [
     'import_made_simple' => 'Import Made Simple',
     'trusted_solution' => 'TRUSTED SOLUTION',
     'to_import' => 'TO IMPORT GOODS OVERSEAS',
+    'need_to_import' => 'NEED TO IMPORT OR EXPORT?',
+    'let_us' => 'LET US HANDLE THE LOGISTICS!',
+
 ];
 
 ?>

@@ -35,7 +35,10 @@
   @apply bg-button cursor-pointer rounded-2xl px-4 py-3 hover:bg-primary transition-colors pointer-events-auto;
 }
 .nav-link {
-  @apply px-0.5 py-1.5 pb-1 border-red-600 hover:border-b-2 font-semibold;
+  @apply px-0.5 py-1.5 pb-1 border-red-600 hover:border-b-2 font-semibold text-sm 2xl:text-base;
+}
+.nav-link.active {
+  @apply border-b-2 border-red-600;
 }
 .splide__arrow--prev.review-arrow {
   @apply -left-20;

@@ -1,5 +1,6 @@
 @props(['title' => '',
-        'description' => ''
+        'description' => '',
+        'description_2' => '',
     ])
 
 <div class="z-10 absolute inset-0 flex flex-col justify-center items-center px-4 h-full text-white text-center">
@@ -9,6 +10,9 @@
       </span>
       <span class="block mt-2 md:text-[5.5rem] text-4xl leading-[0.9] tracking-[-0.em]">
         {{$description}}
+      </span>
+      <span class="block mt-2 md:text-[5.5rem] text-4xl leading-[0.9] tracking-[-0.em]">
+        {{$description_2}}
       </span>
     </h1>
   </div>
