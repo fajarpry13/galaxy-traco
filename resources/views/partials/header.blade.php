@@ -62,7 +62,7 @@
      
      
     <a href="{{ route('home') }}#home" 
-       class="nav-link active">
+       class="nav-link {{ Route::current()->getName() === 'home' ? 'active' : '' }}">
         {{ __('messages.home') }}
     </a>
     
@@ -91,9 +91,8 @@
        class="nav-link">
         {{ __('messages.insights') }}
     </a>
-
        <a href="{{ route('contact') }}" 
-       class="nav-link">
+       class="nav-link {{ Route::current()->getName() === 'contact' ? 'active' : '' }}">
        {{ __('messages.contact') }}
     </a>
 
