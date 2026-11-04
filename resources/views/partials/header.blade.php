@@ -1,12 +1,11 @@
-<header 
-    id="navbar-scrollspy"
-    x-data="{ 
+<header
+    x-data="{
         isHome: {{ request()->routeIs('home') ? 'true' : 'false' }},
         mobileMenuIsOpen: false,
-        scrolled: false 
+        scrolled: false
     }"
     x-init="
-            window.addEventListener('scroll', () => { 
+            window.addEventListener('scroll', () => {
                 if (window.innerWidth > 768) {
                     scrolled = window.scrollY > 150;
                 } else {
@@ -30,11 +29,11 @@
     <div class="container mx-auto flex items-center justify-between px-4 md:px-8 2xl:px-16">
 
         <a href="{{ route('home') }}">
-            <img 
-                :src="(!isHome || scrolled || {{ request()->routeIs('insight*') ? 'true' : 'false' }}) 
-                    ? '{{ asset('assets/icons/font-black-gtraco.png') }}' 
-                    : '{{ asset('assets/icons/font-white-gtraco.png') }}'" 
-                alt="Galaxy Traco Logo" 
+            <img
+                :src="(!isHome || scrolled || {{ request()->routeIs('insight*') ? 'true' : 'false' }})
+                    ? '{{ asset('assets/icons/font-black-gtraco.png') }}'
+                    : '{{ asset('assets/icons/font-white-gtraco.png') }}'"
+                alt="Galaxy Traco Logo"
                 class="h-auto transition-all duration-300 relative z-30"
                 :class="{
                     'w-35 md:w-[200px] py-1 md:py-[10px]' : scrolled,
@@ -58,41 +57,44 @@
             <a href="#" class="nav-link text-sm 2xl:text-base">{{ __('messages.contact') }}</a>
         </nav> --}}
 
-       <nav class="hidden md:flex flex-1 justify-end items-center uppercase space-x-8">
-     
-     
-    <a href="{{ route('home') }}#home" 
-       class="nav-link {{ Route::current()->getName() === 'home' ? 'active' : '' }}">
+       <nav id="navbar-scrollspy" class="hidden md:flex flex-1 justify-end items-center uppercase space-x-8">
+
+
+    <a href="{{ request()->routeIs('home') ? '#home' : route('home') . '#home' }}" @class([
+        'active' => request()->routeIs('home'),
+        'nav-link',
+    ])>
         {{ __('messages.home') }}
     </a>
-    
 
-    <a href="#about" 
-       class="nav-link">
+
+    <a href="{{ request()->routeIs('home') ? '#about' : route('home') . '#about' }}" class="nav-link">
         {{ __('messages.about') }}
     </a>
 
-    <a href="#service" 
-       class="nav-link">
+    <a href="{{ request()->routeIs('home') ? '#service' : route('home') . '#service' }}" class="nav-link">
         {{ __('messages.services') }}
     </a>
 
-    <a href="#why" 
-       class="nav-link">
+    <a href="{{ request()->routeIs('home') ? '#why' : route('home') . '#why' }}" class="nav-link">
         {{ __('messages.why_us') }}
     </a>
 
-    <a href="#workflow" 
-       class="nav-link">
+    <a href="{{ request()->routeIs('home') ? '#workflow' : route('home') . '#workflow' }}" class="nav-link">
         {{ __('messages.workflow') }}
     </a>
 
-      <a href="#insight" 
-       class="nav-link">
+    <a href="{{ request()->routeIs('home') ? '#insight' : route('home') . '#insight' }}" @class([
+        'active' => request()->routeIs('insight'),
+        'nav-link',
+    ])>
         {{ __('messages.insights') }}
     </a>
-       <a href="{{ route('contact') }}" 
-       class="nav-link {{ Route::current()->getName() === 'contact' ? 'active' : '' }}">
+
+    <a href="{{ route('contact') }}" @class([
+        'active' => request()->routeIs('contact'),
+        'nav-link',
+    ])>
        {{ __('messages.contact') }}
     </a>
 
@@ -108,8 +110,8 @@
                 </svg>
             </button>
 
-            <div x-show="open" 
-                 @click.outside="open = false" 
+            <div x-show="open"
+                 @click.outside="open = false"
                  x-transition:enter="transition ease-out duration-100"
                  x-transition:enter-start="transform opacity-0 scale-95"
                  x-transition:enter-end="transform opacity-100 scale-100"
@@ -117,7 +119,7 @@
                  x-transition:leave-start="transform opacity-100 scale-100"
                  x-transition:leave-end="transform opacity-0 scale-95"
                  class="absolute right-0 z-50 mt-2 w-32 rounded-lg border border-gray-100 bg-white py-1 shadow-xl overflow-hidden">
-                
+
                 <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">English</a>
                 <a href="{{ LaravelLocalization::getLocalizedURL('id', null, [], true) }}" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">Indonesia</a>
                 <a href="{{ LaravelLocalization::getLocalizedURL('zh', null, [], true) }}" class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">中文</a>
@@ -127,14 +129,14 @@
         <a href="https://client.galaxytraco.com/login.html" class="hidden md:block rounded-2xl bg-red-600 px-4 py-2 font-semibold text-white transition hover:bg-red-700">
             {{ __('messages.client_area') }}
         </a>
-    
+
 
     <div class="md:hidden flex items-center px-4 z-50">
-        <button id="mobile-menu-button" 
+        <button id="mobile-menu-button"
                 @click="mobileMenuIsOpen = !mobileMenuIsOpen"
                 type="button"
                 class="focus:outline-none"
-                aria-label="Toggle mobile menu" 
+                aria-label="Toggle mobile menu"
                 :class="(isHome && !scrolled && !mobileMenuIsOpen) ? 'text-white' : 'text-black'">
             {{-- <svg x-cloak x-show="!mobileMenuIsOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -148,7 +150,7 @@
         </button>
     </div>
 
-    <div x-cloak 
+    <div x-cloak
          x-show="mobileMenuIsOpen"
          x-transition:enter="transition ease-out duration-300 transform"
          x-transition:enter-start="-translate-y-full opacity-0"
@@ -157,7 +159,7 @@
          x-transition:leave-start="translate-y-0 opacity-100"
          x-transition:leave-end="-translate-y-full opacity-0"
          class="md:hidden top-0 right-0 bottom-0 left-0 fixed backdrop-blur-sm w-full bg-primary border-t border-white/10 z-10">
-        
+
         <div class="flex flex-col space-y-4 text-center gap-6 px-6 pt-22 min-h-full z-10">
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.home') }}</a>
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#about" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.about') }}</a>

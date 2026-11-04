@@ -1,6 +1,5 @@
-   <section class="scrollspy relative bg-cover w-full h-screen overflow-hidden scroll-mt-0" style="background-image: url('{{ asset('/assets/images/bg.png') }}')"
+   <section id="home" class="scrollspy relative bg-cover w-full h-screen overflow-hidden scroll-mt-0" style="background-image: url('{{ asset('/assets/images/bg.png') }}')"
           x-data="{shown: false}"
-          id="home"
    >
       @if (!empty($hero?->video_background))
       <video
@@ -26,10 +25,10 @@
           <source src="{{ asset('assets/videos/GalaxyTracoVideoBackground.mp4') }}" type="video/mp4">
       </video>
         <div class="absolute inset-0 bg-black/30"></div>
-     <x-hero-header 
-    title="{{ __('messages.trusted_solution') }}" 
-    description="{{ __('messages.to_import') }}" 
+     <x-hero-header
+    title="{{ __('messages.trusted_solution') }}"
+    description="{{ __('messages.to_import') }}"
 />
-  
+
     </section>
 

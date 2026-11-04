@@ -1,21 +1,21 @@
+import scrollSpy from 'simple-scrollspy'
 import './bootstrap';
 import './splide.js';
-import scrollSpy from 'simple-scrollspy'
 
-console.log(scrollSpy);
+if (document.querySelector('#navbar-scrollspy')) {
     scrollSpy('#navbar-scrollspy', {
         sectionClass: '.scrollspy',
         menuActiveTarget: '.nav-link',
-        offset: 100,
+        offset: 280,
         onActive: (el) => {
             el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
     });
+}
 
-console.log('Hello, GalaxyT!');
 
 // import Alpine from 'alpinejs'
- 
+
 // window.Alpine = Alpine
- 
+
 // Alpine.start()
