@@ -379,7 +379,7 @@
 </section>
 
 <section class="relative bg-[#8B0000] py-12 md:pt-20 pb-0 overflow-hidden">
-    <div x-data="{shown: false}" x-intersect:enter.threshold.5="shown = true"
+    <div x-data="{shown: false}" x-intersect:enter.threshold.0="shown = true"
         x-intersect:leave.threshold.20="shown = false"
         :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
         class="mx-auto px-4 text-center container">

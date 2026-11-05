@@ -81,7 +81,7 @@
                     <textarea name="message" id="message" rows="5" class="px-3 py-2 border   rounded focus:outline-none focus:ring w-full" required></textarea>
                 </div>
                 <button type="submit"
-                class="grid place-self-end uppercase bg-dark hover:bg-dark/80 px-6 py-2 rounded-lg bg-[#bf021d]  text-white transition duration-300">
+                class="grid place-self-end uppercase cursor-pointer bg-dark hover:bg-dark/80 px-6 py-2 rounded-lg bg-[#bf021d]  text-white transition duration-300">
                 Submit</button>
       </form>
     </div>
