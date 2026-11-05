@@ -104,7 +104,14 @@
     <!-- LANGUAGE SWITCHER -->
         <div class="relative inline-block pl-12 pr-2" x-data="{ open: false }">
             <button @click="open = !open" type="button" class="hidden md:inline-flex cursor-pointer items-center gap-2 rounded-lg bg-black mr-2 px-4 py-2 text-sm font-semibold text-white hover:bg-black/80 focus:outline-none">
-                <span>{{ strtoupper(LaravelLocalization::getCurrentLocale()) }}</span>
+                @php
+                $locales = [
+                    'en' => 'EN',
+                    'id' => 'ID',
+                    'zh' => '中文',
+                ]
+                @endphp
+                <span>{{ strtoupper($locales[LaravelLocalization::getCurrentLocale()] ?? '') }}</span>
                 <svg class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>

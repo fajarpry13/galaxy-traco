@@ -113,7 +113,7 @@
                 <img :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                     src="https://flagcdn.com/w160/cn.png" class="shadow-lg mb-4 w-16" alt="China Flag">
                 <h3 :class="shown ? 'opacity-100 duration-200 delay-300' : 'opacity-0 duration-200 delay-300'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">China</h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">{{ __('messages.china') }}</h3>
             </div>
         </div>
 
@@ -126,7 +126,7 @@
                 <img :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                     src="https://flagcdn.com/w160/sg.png" class="shadow-lg mb-4 w-16" alt="Singapore Flag">
                 <h3 :class="shown ? 'opacity-100 duration-200 delay-300' : 'opacity-0 duration-200 delay-300'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Singapore</h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">{{__('messages.singapore')}}</h3>
             </div>
         </div>
 
@@ -139,7 +139,7 @@
                 <img :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                     src="https://flagcdn.com/w160/th.png" class="shadow-lg mb-4 w-16" alt="Thailand Flag">
                 <h3 :class="shown ? 'opacity-100 duration-200 delay-300' : 'opacity-0 duration-200 delay-300'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Thailand</h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">{{__('messages.thailand')}}</h3>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@
         <x-section-title border-class="bg-red-600">
             <h2 :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                 class="mb-6 font-bold text-primary text-3xl md:text-5xl">
-                Our Services
+                {{ __('messages.our_service') }}
             </h2>
         </x-section-title>
     </div>
@@ -468,7 +468,7 @@
                 <h3 x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
                     x-intersect:leave.threshold.50="shown = false"
                     :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Guangzhou, China</h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider"> {{ __('messages.guangzhou') }}, {{ __('messages.china') }}</h3>
             </div>
         </div>
 
@@ -480,7 +480,7 @@
                 <h3 x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
                     x-intersect:leave.threshold.50="shown = false"
                     :class="shown ? 'opacity-100 duration-200 delay-240' : 'opacity-0 duration-200 delay-240'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Yiwu City, China </h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">{{__('messages.yiwu')}}, {{__('messages.china')}} </h3>
             </div>
         </div>
 
@@ -493,7 +493,7 @@
                 <h3 x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
                     x-intersect:leave.threshold.50="shown = false"
                     :class="shown ? 'opacity-100 duration-200 delay-280' : 'opacity-0 duration-200 delay-280'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Singapore</h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">{{(__('messages.singapore'))}}</h3>
             </div>
         </div>
 
@@ -505,7 +505,7 @@
                 <h3 x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
                     x-intersect:leave.threshold.50="shown = false"
                     :class="shown ? 'opacity-100 duration-200 delay-320' : 'opacity-0 duration-200 delay-320'"
-                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">Bangkok, Thailand</h3>
+                    class="font-bold md:text-2xl 2xl:text-4xl tracking-wider">{{__('messages.bangkok')}}, {{__('messages.thailand')}}</h3>
             </div>
         </div>
     </div>

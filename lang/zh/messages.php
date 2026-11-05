@@ -57,6 +57,14 @@ return [
     'to_import' => '进口海外货物',
     'need_to_import' => '需要进口还是出口？',
     'let_us' => '物流交给我们来处理！',
+    'china' => '中国',
+    'singapore' => '新加坡',
+    'thailand' => '泰国',
+    'guangzhou' => '广州',
+    'yiwu' => '义乌市',
+    'bangkok' => '曼谷',
+
+
 ];
 
 ?>

@@ -57,6 +57,12 @@ return [
     'to_import' => 'TO IMPORT GOODS OVERSEAS',
     'need_to_import' => 'NEED TO IMPORT OR EXPORT?',
     'let_us' => 'LET US HANDLE THE LOGISTICS!',
+    'china' => 'China',
+    'singapore' => 'Singapore',
+    'thailand' => 'Thailand',
+    'guangzhou' => 'Guangzhou',
+    'yiwu' => 'Yiwu City',
+    'bangkok' => 'Bangkok',
 
 ];
 

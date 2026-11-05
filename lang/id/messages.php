@@ -61,6 +61,12 @@ return [
     'to_import' => 'Untuk mengimpor barang dari luar negeri',
     'need_to_import' => 'PERLU IMPORT ATAU EKSPORT?',
     'let_us' => 'BIAR KAMI YANG URUS LOGISTIKNYA!',
+    'china' => 'Cina',
+    'singapore' => 'Singapura',
+    'thailand' => 'Thailand',
+    'guangzhou' => 'Guangzhou',
+    'yiwu' => 'Kota Yiwu',
+    'bangkok' => 'Bangkok',
 
 ];
 
