@@ -17,9 +17,9 @@ const OPTIONS_SINGLE_FULL = {
     next: 'splide__arrow--next top-1/2 -right-4! md:-right-16! flex! justify-center items-center size-10! rounded-full! border-2! border-white! bg-transparent! opacity-100! hover:bg-white/20! z-10 [&_svg]:fill-white! [&_svg]:size-4!',
 },
     breakpoints: {
-        640: {
-            gap: '1rem',
-            padding: '1rem',
+        767: {
+            arrows: false,
+            pagination: true,
         },
         768: {
             gap: '2rem',

@@ -58,6 +58,13 @@
     outline: none;
 }
 
+.splide__pagination__page {
+    background: #d1d5db !important; 
+}
+
+.splide__pagination__page.is-active {
+    background: #15803d !important; 
+}
 html {
   scroll-behavior: smooth;
 }

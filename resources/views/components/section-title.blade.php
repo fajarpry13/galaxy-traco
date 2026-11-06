@@ -4,7 +4,7 @@
 
 
 <div :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'" 
-    class="relative flex flex-col justify-center items-center mx-auto mt-20 text-center">
+    class="relative flex flex-col justify-center items-center mx-auto mt-0 md:mt-20 text-center">
     {{ $slot }}
 
     @if ($hasLine)

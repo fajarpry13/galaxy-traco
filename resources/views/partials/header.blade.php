@@ -138,7 +138,33 @@
         </a>
 
 
-    <div class="md:hidden flex items-center px-4 z-50">
+    <div class="md:hidden flex items-center gap-4 px-2 z-50">
+
+        <div class="relative inline-block" x-data="{ mobileLangOpen: false }">
+                <button @click="mobileLangOpen = !mobileLangOpen" type="button" 
+                        class="flex items-center gap-1 px-2 py-1.5 rounded-md text-xs font-bold border transition"
+                        :class="(isHome && !scrolled && !mobileMenuIsOpen) ? 'border-white/30 text-white bg-black/20' : 'border-gray-300 text-black bg-gray-100'">
+                    <span>{{ strtoupper($locales[LaravelLocalization::getCurrentLocale()] ?? 'EN') }}</span>
+                    <svg class="h-3 w-3 transition-transform duration-200" :class="{ 'rotate-180': mobileLangOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div x-show="mobileLangOpen"
+                     @click.outside="mobileLangOpen = false"
+                     x-transition:enter="transition ease-out duration-100"
+                     x-transition:enter-start="transform opacity-0 scale-95"
+                     x-transition:enter-end="transform opacity-100 scale-100"
+                     x-transition:leave="transition ease-in duration-75"
+                     x-transition:leave-start="transform opacity-100 scale-100"
+                     x-transition:leave-end="transform opacity-0 scale-95"
+                     class="absolute right-0 z-50 mt-2 w-28 rounded-lg border border-gray-100 bg-white py-1 shadow-xl overflow-hidden">
+                    <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}" class="block px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-100 {{ LaravelLocalization::getCurrentLocale() == 'en' ? 'font-bold text-red-600' : '' }}">English</a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL('id', null, [], true) }}" class="block px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-100 {{ LaravelLocalization::getCurrentLocale() == 'id' ? 'font-bold text-red-600' : '' }}">Indonesia</a>
+                    <a href="{{ LaravelLocalization::getLocalizedURL('zh', null, [], true) }}" class="block px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-100 {{ LaravelLocalization::getCurrentLocale() == 'zh' ? 'font-bold text-red-600' : '' }}">中文</a>
+                </div>
+            </div>
+
         <button id="mobile-menu-button"
                 @click="mobileMenuIsOpen = !mobileMenuIsOpen"
                 type="button"
@@ -167,7 +193,7 @@
          x-transition:leave-end="-translate-y-full opacity-0"
          class="md:hidden top-0 right-0 bottom-0 left-0 fixed backdrop-blur-sm w-full bg-primary border-t border-white/10 z-10">
 
-        <div class="flex flex-col space-y-4 text-center gap-6 px-6 pt-22 min-h-full z-10">
+        <div class="flex flex-col space-y-4 text-center gap-4 px-6 pt-22 min-h-full z-10">
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.home') }}</a>
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#about" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.about') }}</a>
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#service" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.services') }}</a>
@@ -176,14 +202,6 @@
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#insight" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.insights') }}</a>
             <a @click="mobileMenuIsOpen = false" href="#" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.contact') }}</a>
 
-            <!-- Language Switcher -->
-            <div class="py-2 flex justify-center gap-4 text-sm text-gray-300 border-b border-white/10">
-                <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}" class="hover:text-white {{ LaravelLocalization::getCurrentLocale() == 'en' ? 'font-bold text-black' : '' }}">EN</a>
-                <span>|</span>
-                <a href="{{ LaravelLocalization::getLocalizedURL('id', null, [], true) }}" class="hover:text-white {{ LaravelLocalization::getCurrentLocale() == 'id' ? 'font-bold text-black' : '' }}">ID</a>
-                <span>|</span>
-                <a href="{{ LaravelLocalization::getLocalizedURL('zh', null, [], true) }}" class="hover:text-white {{ LaravelLocalization::getCurrentLocale() == 'zh' ? 'font-bold text-black' : '' }}">ZH</a>
-            </div>
 
             <a href="https://client.galaxytraco.com/login.html" class="bg-red-600 py-3 rounded-xl font-bold text-white hover:bg-red-700 transition mt-2">
                 {{ __('messages.client_area') }}

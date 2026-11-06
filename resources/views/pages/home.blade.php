@@ -45,7 +45,7 @@
             </div>
         </div>
         <div x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
-            x-intersect:leave.threshold.50="shown = false" class="mx-auto md:mt-20 max-w-4xl text-center">
+            x-intersect:leave.threshold.50="shown = false" class="mx-auto mt-10 md:mt-20 max-w-4xl text-center">
             <x-section-title border-class="bg-red-600">
                 <h2 :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
                     class="mb-6 font-bold text-primary text-3xl md:text-4xl">
@@ -145,7 +145,7 @@
     </div>
 </section>
 
-<section id="service" class="scrollspy scroll-mt-47">
+<section id="service" class="scrollspy scroll-mt-47 py-12 md:py-0">
     <div x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false">
         <x-section-title border-class="bg-red-600">
@@ -408,7 +408,7 @@
     </div>
 </section>
 
-<section id="workflow" class="scrollspy scroll-mt-27 bg-white py-20">
+<section id="workflow" class="scrollspy scroll-mt-27 bg-white py-6 md:py-20">
     <div x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
         x-intersect:leave.threshold.50="shown = false"
         :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'"
@@ -419,7 +419,7 @@
                     {{ __('messages.our_workflow') }}
                 </h2>
             </x-section-title>
-            <img src="{{ 'assets/images/workflow.png' }}" alt="Container-Workflow"
+            <img src="{{ asset('assets/images/' . app()->getLocale() . '/workflow.png') }}" alt="Container-Workflow"
                 class="w-full h-full object-cover">
 
         </div>
@@ -513,7 +513,7 @@
 </section>
 
 <section id="insight" class="scrollspy scroll-mt-27 py-0 md:py-20">
-    <div class="mx-auto px-4 container">
+    <div class="mx-auto px-4 py-8 md:py-0 container">
         <div x-data="{shown: false}" x-intersect:enter.threshold.50="shown = true"
             x-intersect:leave.threshold.50="shown = false"
             :class="shown ? 'opacity-100 duration-200 delay-200' : 'opacity-0 duration-200 delay-200'">
@@ -616,7 +616,7 @@
 
     </div>
 </section> --}}
-<section class="relative bg-cover bg-center py-24" style="background-image: url('{{ asset('assets/images/warehouse.png') }}')">
+<section class="relative bg-cover bg-center py-12 md:py-24" style="background-image: url('{{ asset('assets/images/warehouse.png') }}')">
     <div class="absolute inset-0 bg-green-800/90"></div>
 
     <div class="z-10 relative mx-auto px-4 text-white text-center container">
