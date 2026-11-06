@@ -200,7 +200,7 @@
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#why" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.why_us') }}</a>
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#workflow" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.workflow') }}</a>
             <a @click="mobileMenuIsOpen = false" href="{{ route('home') }}#insight" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.insights') }}</a>
-            <a @click="mobileMenuIsOpen = false" href="#" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.contact') }}</a>
+            <a @click="mobileMenuIsOpen = false" href="{{ route('contact') }}" class="py-2 border-b border-white/10 text-white font-medium hover:text-red-500 transition">{{ __('messages.contact') }}</a>
 
 
             <a href="https://client.galaxytraco.com/login.html" class="bg-red-600 py-3 rounded-xl font-bold text-white hover:bg-red-700 transition mt-2">
