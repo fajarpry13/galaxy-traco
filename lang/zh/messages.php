@@ -63,6 +63,23 @@ return [
     'guangzhou' => '广州',
     'yiwu' => '义乌市',
     'bangkok' => '曼谷',
+    'posted_by' => '发布者',
+    'contact_us' => '联系我们',
+        'name' => '姓名',
+        'email' => '电子邮箱',
+        'telephone' => '电话',
+        'company' => '公司名称',
+        'message' => '留言内容',
+        'our_office' => '我们的办公室',
+        'address' => '格林湖城中央商务区店铺',
+        'address_full' => 'C栋 76号, 唐格朗 15146',
+        'time_work' => '星期一至星期五 08.00-17.00 WIB,',
+        'time_work_full' => '星期六 08.00-14.00 WIB',
+        'contact_us_today' => '立即联系我们获取',
+        'free_consultation' => '免费咨询',
+        'and_hassle' => '及省心便捷的运输解决方案。',
+        'submit' => '提交',
+
 
 
 ];

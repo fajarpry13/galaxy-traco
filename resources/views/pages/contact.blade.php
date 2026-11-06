@@ -15,14 +15,14 @@
       loading="lazy"
       referrerpolicy="strict-origin-when-cross-origin"></iframe>
       <div class="bg-[#082f22] text-white flex flex-col mx-auto p-10 w-full">
-        <div class="text-3xl mb-4">
-          Kantor Kami
+        <div class="text-3xl font-bold mb-4">
+          {{__('messages.our_office')}}
         </div>
         <div class="flex flex-row py-4">
             @svg('heroicon-o-map-pin','size-8')
             <div class="pl-4">
-              Green Lake City Ruko CBD <br>
-              Blok C No.76, Tangerang 15146
+              {{__('messages.address')}} <br>
+                {{ __('messages.address_full') }}
             </div>
         </div>
         <div class="flex flex-row py-4">
@@ -40,49 +40,49 @@
         <div class="flex flex-row py-4">
             @svg('heroicon-o-clock','size-8')
             <div class="pl-4">
-              Mon-Fri 08.00-17.00 WIB,<br>
-              Sat 08.00-14.00 WIB
+              {{__('messages.time_work')}}<br>
+              {{__('messages.time_work_full')}}
             </div>
         </div>
       </div>
     </div>
     <div class="col-span-9 bg-white py-6 px-12">
       <form action="" class="flex flex-col h-full">
-        <h1 class="text-3xl text-primary text-dark mb-4">
-           Hubungi Kami
+        <h1 class="text-3xl font-bold text-primary text-dark mb-4">
+           {{__('messages.contact_us')}}
         </h1>
 
          <div class="mb-4">
-                    <label for="name" class="block mb-2  text-dark">Nama</label>
+                    <label for="name" class="block mb-2  text-dark">{{__('messages.name')}}</label>
                     <input type="text" name="name" id="name" class="px-3 py-2 border   rounded focus:outline-none focus:ring w-full" required>
                 </div>
 
                 <!-- Email -->
                 <div class="mb-4">
-                    <label for="email" class="block mb-2  text-dark">Email</label>
+                    <label for="email" class="block mb-2  text-dark">{{__('messages.email')}}</label>
                     <input type="email" name="email" id="email" class="px-3 py-2 border   rounded focus:outline-none focus:ring w-full" required>
                 </div>
 
                 <!-- Phone -->
                 <div class="mb-4">
-                    <label for="phone" class="block mb-2  text-dark">Telepon</label>
+                    <label for="phone" class="block mb-2  text-dark">{{__('messages.telephone')}}</label>
                     <input type="text" name="phone" id="phone" class="px-3 py-2 border   rounded focus:outline-none focus:ring w-full" required>
                 </div>
 
                 {{-- Office --}}
                 <div class="mb-4">
-                    <label for="office" class="block mb-2  text-dark">Perusahaan</label>
+                    <label for="office" class="block mb-2  text-dark">{{__('messages.company')}}</label>
                     <input type="text" name="office" id="office" class="px-3 py-2 border   rounded focus:outline-none focus:ring w-full" required>
                 </div>
 
                 <!-- Pesan -->
                 <div class="mb-4 flex flex-col flex-1">
-                    <label for="message" class="block mb-2  text-dark">Pesan</label>
+                    <label for="message" class="block mb-2  text-dark">{{__('messages.message')}}</label>
                     <textarea name="message" id="message" rows="5" class="px-3 py-2 border   rounded focus:outline-none focus:ring w-full" required></textarea>
                 </div>
                 <button type="submit"
-                class="grid place-self-end uppercase cursor-pointer bg-dark hover:bg-dark/80 px-6 py-2 rounded-lg bg-[#bf021d]  text-white transition duration-300">
-                Submit</button>
+                class="grid place-self-end uppercase cursor-pointer bg-dark hover:bg-red-900 px-6 py-2 rounded-lg bg-[#bf021d]  text-white transition duration-300">
+                {{__('messages.submit')}}</button>
       </form>
     </div>
 </section>
@@ -93,8 +93,8 @@
   <span class="text-red-600">Free Consultation</span>
   <span class="text-black ">and hassle-free shipping solutions.</span>
 </div> --}}
-<div class="text-2xl"> Contact us today for a <span class="text-red-600">Free Consultation</span>
-    and hassle-free shipping solutions.</div>
+<div class="text-2xl"> {{__('messages.contact_us_today')}} <span class="text-red-600">{{__('messages.free_consultation')}}</span>
+    {{__('messages.and_hassle')}}</div>
 
 <div class="flex flex-row container w-full h-auto px-8 py-10">
     <div class="px-8 py-10 bg-white mx-auto flex flex-row justify-evenly items-center gap-8 container">

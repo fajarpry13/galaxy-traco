@@ -7,7 +7,8 @@
     </h1>
 
     <div class="text-sm text-gray-500 border-b border-gray-100 pb-4">
-        {{ $article['date'] ?? 'Thu, 1 Oct 2026' }} | posted by {{ $article['author'] ?? 'Admin' }}
+        {{-- {{ $article['date'] ?? 'Thu, 1 Oct 2026' }} | posted by {{ $article['author'] ?? 'Admin' }} --}}
+        {{ \Carbon\Carbon::parse($article['date'] ?? '2026-10-01')->locale(app()->getLocale())->translatedFormat('D, j M Y') }} | {{ __('messages.posted_by') }} {{ $article['author'] ?? 'Admin' }}
     </div>
 
     <div class="overflow-hidden rounded-lg">

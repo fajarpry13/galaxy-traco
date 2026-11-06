@@ -13,6 +13,7 @@
         "codeat3/blade-solar-icons": "^1.4",
         "diglactic/laravel-breadcrumbs": "^10.1",
         "filament/filament": "~4.0",
+        "lara-zeus/spatie-translatable": "^1.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.8",

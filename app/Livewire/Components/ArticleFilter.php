@@ -61,6 +61,7 @@ class ArticleFilter extends Component
     'title' => [
         'en' => 'What You Need to Know Before Importing Goods from Overseas',
         'id' => 'Hal yang Perlu Anda Ketahui Sebelum Mengimpor Barang dari Luar Negeri',
+        'zh' => '从海外进口商品前需要了解的事项',
     ],
     'description' => [
         'en' => '
@@ -121,6 +122,35 @@ class ArticleFilter extends Component
             <br>
             <p><em>Galaxy Traco siap mendukung kebutuhan logistik internasional Anda — mulai dari pengiriman luar negeri hingga pengurusan bea cukai dan pengiriman akhir.</em></p>
         ',
+        'zh' => '
+            <p>进口商品可以打开更大的商业机遇——更优惠的价格、独特的产品供应以及直接对接全球制造商。然而，在开始之前，有几个关键事项您必须了解。</p>
+            <br>
+            <h3>1. 明确您的产品与 HS 编码</h3>
+            <p>首先明确您要进口的具体商品及其 HS（协调制度）编码。HS 编码将决定适用的关税、税率以及进口监管要求。</p>
+            <br>
+            <h3>2. 检查进口法规政策</h3>
+            <p>不同商品可能需要特定的许可证、认证或技术标准。发货前，请确保您的货物符合目的国的法律法规。</p>
+            <br>
+            <h3>3. 计算总落地成本（Landed Cost）</h3>
+            <p>采购价格只是成本的一部分。您还需要考量海运/空运运费、保险费、进口关税、税费、报关清关费、港口杂费以及其他物流费用，以掌握真实的落地总成本。</p>
+            <br>
+            <h3>4. 选择合适运输方式</h3>
+            <p>根据货物的体积重、时效要求和预算，您可以选择海运、空运或其他运输方案。正确的运输方式能显著降低成本并缩短交货时间。</p>
+            <br>
+            <h3>5. 了解国际贸易术语（Incoterms）</h3>
+            <p>诸如 EXW、FOB、CIF 和 DDP 等术语明确了运输各阶段中费用、运输、保险和风险的责任划分。请确保您与供应商对约定的贸易术语理解一致。</p>
+            <br>
+            <h3>6. 准备准确齐全的单证</h3>
+            <p>常见单据包括商业发票（Commercial Invoice）、装箱单（Packing List）、海运/空运提单（Bill of Lading / Air Waybill）、原产地证明（Certificate of Origin）以及所需的许可认证。单证不全或不准确可能导致海关扣关或延误。</p>
+            <br>
+            <h3>7. 与专业的物流伙伴合作</h3>
+            <p>经验丰富的物流合作伙伴能够协助统筹运输、单证办理、清关和末端派送——为您提供透明的全程追踪，减少不必要的繁琐麻烦。</p>
+            <br>
+            <h3>更聪明的进口，更自信的远航</h3>
+            <p>只要规划得当，跨国进口并不复杂。通过明确监管要求、精算成本、准备齐备单证，并与值得信赖的物流伙伴合作，您可以让海外采购流程变得更加可控与高效。</p>
+            <br>
+            <p><em>Galaxy Traco 随时准备为您提供全面的国际物流支持——从海外发货、报关清关到最终派送，全程保驾护航。</em></p>
+        ',
     ],
 ],
     [
@@ -130,10 +160,12 @@ class ArticleFilter extends Component
         'title' => [
             'en' => 'The Easiest Way to Import Goods: Door-to-Door Shipping',
             'id' => 'Cara Termudah Impor Barang: Pengiriman Door-to-Door',
+            'zh' => '最简单的进口货物方式：门到门运输'
         ],
         'description' => [
             'en' => 'For many business owners, the most challenging part of importing isnt finding products — it’s handling the process: shipping, customs, paperwork, taxes, and delivery. That’s where door-to-door import services make a.',
             'id' => 'Bagi banyak pelaku bisnis, bagian paling menantang dari kegiatan impor bukanlah mencari produknya — melainkan mengurus prosesnya: pengiriman, bea cukai, dokumen, pajak, dan pengiriman akhir. Di sinilah layanan impor door-to-door sangat membantu.',
+            'zh' => '对于许多企业主而言，进口业务中最具挑战性的环节并非寻找产品，而是处理整个流程——包括运输、清关、单证、税费以及最终交付。而“门到门”进口服务恰好能在此发挥作用。'
         ],
     ],
     [
@@ -143,10 +175,12 @@ class ArticleFilter extends Component
         'title' => [
             'en' => 'Trending Products in China: Ideas to Inspire Your Next Business Move',
             'id' => 'Produk Tren di China: Ide untuk Menginspirasi Langkah Bisnis Anda Selanjutnya',
+            'zh' => '中国热门产品：为您下一次商业布局提供灵感'
         ],
         'description' => [
             'en' => 'China remains one of the biggest product innovation hubs, and trends change fast — giving endless opportunities for new business ideas. If youre planning your next import move, here are some categories currently.',
             'id' => 'China tetap menjadi salah satu pusat inovasi produk terbesar, dan tren berubah dengan cepat — memberikan peluang tak terbatas untuk ide bisnis baru. Jika Anda merencanakan langkah impor berikutnya, berikut adalah beberapa kategori yang sedang tren.',
+            'zh' => '中国依然是全球最大的产品创新中心之一，且潮流更迭迅速，这为各类全新的商业构想提供了无限机遇。如果您正在筹划下一次进口业务，以下是一些当前值得关注的产品类别。'
         ],
     ],
         ];

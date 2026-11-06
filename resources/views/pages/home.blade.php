@@ -27,7 +27,7 @@
             transition-all ease-in-out delay-150 duration-400">
                     <img src="{{ asset('assets/icons/icon.png') }}"
                         class="mb-2 w-15 md:w-20 h-auto" />
-                    <span class="font-bold text-lg md:text-3xl">+300</span>
+                    <span class="font-bold text-lg md:text-3xl">+3000</span>
                     <span
                         class="font-bold text-base md:text-lg uppercase tracking-widest">{{ __('messages.clients_served') }}</span>
                 </div>

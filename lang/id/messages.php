@@ -67,6 +67,25 @@ return [
     'guangzhou' => 'Guangzhou',
     'yiwu' => 'Kota Yiwu',
     'bangkok' => 'Bangkok',
+    'posted_by' => 'diposting oleh',
+    'contact_us' => 'Hubungi Kami',
+    'name' => 'Nama',
+    'email' => 'Email',
+    'telephone' => 'Telepon',
+    'company' => 'Perusahaan',
+    'message' => 'Pesan',
+    'our_office' => 'Kantor Kami',
+    'address' => 'Green Lake City Ruko CBD ',
+    'address_full' => 'Blok C No.76, Tangerang 15146',
+    'time_work' => 'Senin-Jumat 08.00-17.00 WIB,',
+    'time_work_full' => 'Sat 08.00-14.00 WIB',
+    'contact_us_today' => 'Hubungi kami hari ini untuk',
+        'free_consultation' => 'Konsultasi Gratis',
+        'and_hassle' => 'dan solusi pengiriman tanpa repot.',
+        'submit' => 'Kirim',
+
+
+
 
 ];
 

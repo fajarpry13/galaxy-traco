@@ -31,8 +31,8 @@
         <a href="{{ route('home') }}">
             <img
                 :src="(!isHome || scrolled || {{ request()->routeIs('insight*') ? 'true' : 'false' }})
-                    ? '{{ asset('assets/icons/font-black-gtraco.png') }}'
-                    : '{{ asset('assets/icons/font-white-gtraco.png') }}'"
+                    ? '{{ asset('assets/icons/new_logo_gtc.png') }}'
+                    : '{{ asset('assets/icons/new_logo_gtc.png') }}'"
                 alt="Galaxy Traco Logo"
                 class="h-auto transition-all duration-300 relative z-30"
                 :class="{

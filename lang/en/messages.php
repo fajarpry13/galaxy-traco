@@ -63,6 +63,22 @@ return [
     'guangzhou' => 'Guangzhou',
     'yiwu' => 'Yiwu City',
     'bangkok' => 'Bangkok',
+    'posted_by' => 'posted by',
+    'contact_us' => 'Contact Us',
+        'name' => 'Name',
+        'email' => 'Email',
+        'telephone' => 'Telephone',
+        'company' => 'Company',
+        'message' => 'Message',
+        'our_office' => 'Our Office',
+        'address' => 'Green Lake City CBD Shophouse',
+        'address_full' => 'Block C No. 76, Tangerang 15146',
+        'time_work' => 'Mon-Fri 08.00-17.00 WIB,',
+        'time_work_full' => 'Sat 08.00-14.00 WIB',
+        'contact_us_today' => 'Contact us today for a',
+        'free_consultation' => 'Free Consultation',
+        'and_hassle' => 'and hassle-free shipping solution.',
+        'submit' => 'Submit',
 
 ];
 
