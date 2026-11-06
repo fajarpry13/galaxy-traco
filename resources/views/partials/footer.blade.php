@@ -12,11 +12,11 @@
         </div>
 
   <div class="container mx-auto flex flex-col items-center text-center">
-    <div class="flex flex-col items-center">
-      <img src="{{ asset('/assets/icons/new_logo_gtc.png') }}" alt="Galaxy Traco Logo" class="h-20 mb-4" />
-      {{-- <h2 class="text-lg md:text-2xl font-goth font-bold tracking-tighter uppercase">
+    <div class="flex flex-col items-center mb-8">
+      <img src="{{ asset('/assets/images/logo-galaxyt.png') }}" alt="Galaxy Traco Logo" class="h-20 mb-4" />
+      <h2 class="text-lg md:text-2xl font-goth font-bold tracking-tighter uppercase">
         GALAXY TRACO
-      </h2> --}}
+      </h2>
     </div>
 
     <div class="mb-12">
